@@ -1,0 +1,234 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    line-height: 1.2;
+    color: #4F4F4F;
+    font-family: SourceSansPro;
+    font-style: normal;
+    font-size: 16px;
+    background-color: #fff;
+
+    &._noscroll {
+        overflow: hidden;
+    }
+
+    &::-webkit-scrollbar {
+    }
+
+    &::-webkit-scrollbar-thumb {
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+._container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: $container + px;
+
+    @media (max-width: $containerWithPadding + px) {
+        max-width: none;
+        padding-inline: $padding + px;
+    }
+}
+
+section {
+    margin-bottom: 100px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 80px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Namu1960;
+    font-weight: 700;
+}
+
+._namu-pro {
+    font-family: NamuPro;
+    font-weight: 900;
+}
+
+h1 {
+    @include adaptive-value("font-size", 52, 28, 1);
+}
+
+h2 {
+    @include adaptive-value("font-size", 36, 28, 1);
+    margin-bottom: 20px;
+    text-align: center;
+
+    + p {
+        text-align: center;
+
+        + p {
+            text-align: center;
+        }
+    }
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 24px;
+}
+
+p {
+}
+
+a {
+    color: inherit;
+}
+
+._italic {
+    font-style: italic;
+}
+
+.slider-buttons {
+    button {
+        img,
+        svg {
+        }
+    }
+}
+
+figure,
+img,
+svg {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+._btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 18px;
+    font-size: 22px;
+
+    border-radius: 10px;
+    background: linear-gradient(138deg, #ca0000 0%, #ff4141 47.92%, #f00000 100%);
+
+    color: #fff;
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+
+    width: 100%;
+    max-width: 300px;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            background: #fff;
+            color: #ca0000;
+            box-shadow: 0px 0px 0px 1px #ca0000;
+        }
+    }
+
+    // ._btn-red
+
+    &-red {
+        background: #ca0000;
+    }
+
+    // ._btn-border
+
+    &-border {
+        color: #ca0000;
+        background: transparent;
+        border: 1px solid currentColor;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+                background: #ca0000;
+                box-shadow: 0px 0px 0px 1px #fff;
+            }
+        }
+    }
+
+    // ._btn-blue
+
+    &-blue {
+        background: #002c83;
+
+        &:hover {
+            color: #002c83;
+            background: #fff;
+            box-shadow: 0px 0px 0px 1px #002c83;
+        }
+    }
+}
+
+._more {
+    color: #ca0000;
+    text-align: center;
+    font-family: Bebas Neue;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
+._red {
+    color: #ca0000;
+}
+
+._blue {
+    color: #0f1954;
+}
+
+._light-blue {
+    color: #073ca6;
+}
+
+._yellow {
+    color: #fdba38;
+}
+
+._630 {
+    max-width: 630px !important;
+    margin-inline: auto;
+
+    @media (max-width: 768px) {
+        max-width: none;
+        margin-inline: 0;
+    }
+}
+
+._930 {
+    max-width: 930px !important;
+    margin: 0 auto;
+}

@@ -1,0 +1,116 @@
+.casino-reviews {
+    // .casino-reviews__container
+
+    &__container {
+    }
+
+    // .casino-reviews__body
+
+    &__body {
+        margin-inline: 0;
+
+        h2,
+        p {
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    // .casino-reviews__flex
+
+    &__flex {
+        margin-top: 20px;
+        display: flex;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        & > :not(:last-child) {
+            margin-right: 30px;
+
+            @media (max-width: 768px) {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                margin-right: 10px;
+                width: 22.5px;
+                height: 22.5px;
+                position: relative;
+                display: block;
+
+                &:before,
+                &:after {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: #00d322;
+                }
+
+                &:before {
+                    left: 0;
+                    transform: translate(0, -50%);
+                }
+
+                &:after {
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+            }
+        }
+
+        div {
+            & > :last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        // .casino-reviews__flex-item
+
+        &-item {
+            p {
+                &:before {
+                    display: block;
+                    margin: 0 auto;
+                    content: "";
+                    width: 42px;
+                    height: 1px;
+                    background-color: #e3e3e3;
+                    margin-bottom: 15px;
+                }
+
+                text-align: center;
+            }
+
+            &.item-minus {
+                h3 span {
+                    &:before,
+                    &:after {
+                        background-color: #d30000;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+// null default styles
+@import "null";
+
+// load fonts
+@import "fonts";
+
+//load variables
+@import "common/variables";
+
+// load mixins
+@import "mixins";
+
+// load swiper
+@import "../../node_modules/swiper/swiper";
+
+// load common
+@import "common/common";
+
+// load header
+@import "common/header";
+
+// load footer
+@import "common/footer";
+
+// load error 404
+@import "common/404";
+
+// load side fixed
+@import "common/side-fixed";
+
+// load menu
+@import "common/menu";
+
+// load to top
+@import "common/to-top";
+
+// load form
+@import "common/form";
+
+// load hero
+@import "parts/hero";
+
+// load grid
+@import "parts/grid";
+
+// load cards
+@import "parts/cards";
+
+// load slider
+@import "parts/slider";
+
+// load background
+@import "parts/background";
+
+// load casino reviews
+@import "parts/casino-reviews";
+
+// load breadcrumbs
+@import "parts/breadcrumbs";
+ 
+// load table
+@import "parts/table";
+
+// load wordpress
+@import "parts/wordpress";

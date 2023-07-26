@@ -1,0 +1,112 @@
+.form {
+    // .form__rows
+
+    &__rows {
+        // .form__rows-item
+
+        &-item {
+        }
+
+        // .form__rows-content
+
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: flex-end;
+
+            & > :not(:last-child) {
+                margin-right: 15px;
+
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                display: block;
+                gap: 0;
+            }
+        }
+    }
+
+    // .form__input
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        label {
+            color: #ccc;
+            font-family: Bebas Neue;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+            transform: translate(0, 50%);
+            background-color: #fff;
+            width: fit-content;
+            margin-left: 26px;
+            padding: 0 4px;
+        }
+
+        input {
+            border-radius: 10px;
+            border: 1px solid #cfcfcf;
+
+            font-weight: 500;
+            letter-spacing: -0.72px;
+            padding: 18px 20px 18px 30px;
+            width: 100%;
+            font-size: 18px;
+            height: 60px;
+
+            &::placeholder {
+                color: #cccccc;
+            }
+
+            @media (max-width: 768px) {
+                max-width: none;
+            }
+        }
+    }
+
+    // .form__button
+
+    &__button {
+        position: relative;
+
+        input {
+            width: 100%;
+            cursor: pointer;
+            height: 60px;
+
+            @media (max-width: 768px) {
+                max-width: none;
+            }
+        }
+
+        .wpcf7-spinner {
+            position: absolute;
+            bottom: 0;
+            transform: translate(-50%, 28px);
+            left: 50%;
+            margin: 0;
+        }
+    }
+}
+
+.wpcf7-response-output {
+    border-radius: 20px;
+    text-align: center !important;
+    margin-inline: 0 !important;
+}
+
+.invalid .wpcf7-response-output {
+    border-color: #d20023 !important;
+}

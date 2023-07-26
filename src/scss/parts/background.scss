@@ -1,0 +1,117 @@
+.background {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background: linear-gradient(118deg, #073ca6 0%, #1c4fb4 44.79%, #2153b7 100%);
+    color: #fff;
+
+    // .background__container
+
+    &__container {
+    }
+
+    // .background__body
+
+    &__body {
+    }
+
+    // .background__top
+
+    &__top {
+    }
+
+    ul {
+        margin-top: 30px;
+
+        & > :not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 25px;
+
+            & > :not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        li {
+            text-align: center;
+        }
+    }
+
+    &._numeric {
+        ul {
+            counter-reset: num;
+
+            li {
+                counter-increment: num;
+
+                &:before {
+                    content: counter(num);
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    border: 1px solid #e3e3e3;
+                    border-radius: 15px;
+                    margin-bottom: 10px;
+
+                    color: #fdba38;
+                    font-family: Bebas Neue;
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    &._attention {
+        position: relative;
+        padding-top: 100px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    &._white {
+        color: inherit;
+        background: transparent;
+    }
+
+    &.text-center {
+        * {
+            text-align: center;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ._btn {
+            margin-top: 30px;
+            margin-inline: auto;
+        }
+    }
+}

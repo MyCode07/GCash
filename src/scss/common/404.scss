@@ -1,0 +1,22 @@
+main.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    text-align: center;
+
+    a {
+        margin-inline: auto;
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
