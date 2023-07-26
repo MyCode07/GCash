@@ -10,21 +10,25 @@ table {
         max-width: none;
     }
 
-    tr{
-        @media (max-width:768px){
+    tr {
+        @media (max-width: 768px) {
             min-width: 120px;
         }
     }
 
     td {
-        border: 1px solid #cdcdcd !important;
+        border: 1px solid #cccccc !important;
 
-        padding: 11px 20px !important;
-        text-align: left;
+        padding: 10px !important;
 
         @media (max-width: 768px) {
             font-size: 14px;
-            padding: 10px 15px !important;
+            padding: 10px !important;
+        }
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -38,26 +42,6 @@ table {
         tr {
             & > :not(:last-child) {
                 border-right: 0 !important;
-            }
-        }
-
-        & > :first-child {
-            & > :first-child {
-                border-top-left-radius: 20px;
-            }
-
-            & > :last-child {
-                border-top-right-radius: 20px;
-            }
-        }
-
-        & > :last-child {
-            & > :first-child {
-                border-bottom-left-radius: 20px;
-            }
-
-            & > :last-child {
-                border-bottom-right-radius: 20px;
             }
         }
     }

@@ -5,11 +5,12 @@ html {
 body {
     scroll-behavior: smooth;
     line-height: 1.2;
-    color: #4F4F4F;
+    color: #4f4f4f;
     font-family: SourceSansPro;
     font-style: normal;
     font-size: 16px;
     background-color: #fff;
+    letter-spacing: -0.04em;
 
     &._noscroll {
         overflow: hidden;
@@ -62,6 +63,7 @@ h5,
 h6 {
     font-family: Namu1960;
     font-weight: 700;
+    letter-spacing: -0.06em;
 }
 
 ._namu-pro {
@@ -75,16 +77,6 @@ h1 {
 
 h2 {
     @include adaptive-value("font-size", 36, 28, 1);
-    margin-bottom: 20px;
-    text-align: center;
-
-    + p {
-        text-align: center;
-
-        + p {
-            text-align: center;
-        }
-    }
 }
 
 h3 {
@@ -128,107 +120,114 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 
     padding: 18px;
-    font-size: 22px;
-
-    border-radius: 10px;
-    background: linear-gradient(138deg, #ca0000 0%, #ff4141 47.92%, #f00000 100%);
-
-    color: #fff;
-    font-family: Bebas Neue;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    text-transform: uppercase;
-
     width: 100%;
     max-width: 300px;
+
+    font-family: Namu1960;
+    letter-spacing: -0.06em;
+
+    color: #fff;
+    background: linear-gradient(140deg, #06f 0%, #3586ff 100%);
 
     transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
         &:hover {
-            background: #fff;
-            color: #ca0000;
-            box-shadow: 0px 0px 0px 1px #ca0000;
+            background: linear-gradient(240deg, #06f 0%, #3586ff 100%);
         }
     }
 
-    // ._btn-red
-
-    &-red {
-        background: #ca0000;
-    }
-
-    // ._btn-border
-
-    &-border {
-        color: #ca0000;
-        background: transparent;
-        border: 1px solid currentColor;
-
-        @media (any-hover: hover) {
-            &:hover {
-                color: #fff;
-                background: #ca0000;
-                box-shadow: 0px 0px 0px 1px #fff;
-            }
-        }
-    }
-
-    // ._btn-blue
-
-    &-blue {
-        background: #002c83;
-
-        &:hover {
-            color: #002c83;
-            background: #fff;
-            box-shadow: 0px 0px 0px 1px #002c83;
-        }
+    &:after {
+        content: "";
+        width: 1em;
+        height: 1em;
+        background-image: url("@img/icons/arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 8px;
+        flex: 0 0 auto;
     }
 }
 
 ._more {
-    color: #ca0000;
-    text-align: center;
-    font-family: Bebas Neue;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1;
-    text-decoration-line: underline;
-    text-transform: uppercase;
-}
+    color: #0066ff;
+    color: #06f;
+    font-family: Namu1960;
+    letter-spacing: -0.96px;
+    position: relative;
+    padding-right: 1.5em;
+    display: block;
+    width: fit-content;
 
-._red {
-    color: #ca0000;
-}
+    &:after,
+    &:before {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
 
-._blue {
-    color: #0f1954;
-}
+        width: 1.05em;
+        height: 1px;
+        background-color: currentColor;
+    }
 
-._light-blue {
-    color: #073ca6;
-}
-
-._yellow {
-    color: #fdba38;
-}
-
-._630 {
-    max-width: 630px !important;
-    margin-inline: auto;
-
-    @media (max-width: 768px) {
-        max-width: none;
-        margin-inline: 0;
+    &:before {
+        transform: translate(0, -50%) rotate(90deg);
     }
 }
 
-._930 {
-    max-width: 930px !important;
-    margin: 0 auto;
+._blue {
+    color: #0066ff;
+}
+
+._270 {
+    max-width: 270px !important;
+
+    @media (max-width: 768px) {
+        max-width: none !important;
+    }
+}
+
+._border {
+    padding-top: 20px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.image-link {
+    background-color: #fff;
+    box-shadow: 0px 0px 42px 0px rgba(0, 0, 0, 0.06);
+    display: block;
+
+    color: #06f;
+    font-family: Namu1960;
+    font-size: 20px;
+
+    position: relative;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba($color: #cccccc, $alpha: 0.6);
+        }
+    }
+
+    span {
+        display: block;
+        padding: 20px 0 20px 20px;
+        z-index: 1;
+        position: relative;
+
+        @include adaptive-value("padding-right", 90, 40, 1);
+    }
+
+    img {
+        margin: 0 !important;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        max-height: 100%;
+    }
 }

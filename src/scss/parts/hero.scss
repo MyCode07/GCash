@@ -34,7 +34,7 @@
 
     &__left {
         @media (min-width: 769px) {
-            width: calc(50% - 20px);
+            width: calc(50% - 10px);
         }
 
         // .hero__left-image
@@ -58,21 +58,18 @@
         }
 
         h1 {
-            margin-bottom: 20px;
-
-            @media (max-width: 768px) {
-                text-align: center;
-            }
+            @include adaptive-value("margin-bottom", 40, 20, 1);
         }
 
         div {
+            padding-top: 20px;
+            border-top: 1px solid #dbdbdb;
+
             & > :not(:last-child) {
                 margin-bottom: 15px;
             }
 
             @media (max-width: 768px) {
-                text-align: center;
-
                 & > :not(:last-child) {
                     margin-bottom: 10px;
                 }
@@ -80,22 +77,10 @@
         }
 
         ._more {
-            display: none;
-            margin-top: 20px;
-
-            @media (max-width: 768px) {
-                margin-top: 15px;
-                display: block;
-            }
-        }
-
-        ._btn {
-            margin-top: 30px;
+            margin-top: 15px;
 
             @media (max-width: 768px) {
                 margin-top: 20px;
-                max-width: none;
-                width: 100%;
             }
         }
     }
@@ -104,7 +89,7 @@
 
     &__right {
         @media (min-width: 769px) {
-            width: calc(50% - 20px);
+            width: calc(50% - 10px);
         }
 
         @media (max-width: 768px) {
