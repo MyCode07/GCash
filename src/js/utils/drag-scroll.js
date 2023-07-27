@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 import { isMobile } from './isMobile.js'
 
 const dragSiders = document.querySelectorAll('.slides__flex');
@@ -51,3 +52,8 @@ if (dragSiders.length) {
 }
 
 
+new Swiper('.swiper', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    spaceBetween: 30
+})

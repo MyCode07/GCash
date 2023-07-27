@@ -4,6 +4,7 @@ import './utils/to-top.js';
 import './utils/replace.js';
 import './utils/inputmask.js';
 import './utils/drag-scroll.js';
+import './utils/accordeon.js';
 
 // import './utils/animations.js';
 // import './utils/smoothscrol.js';
@@ -12,5 +13,4 @@ import './utils/drag-scroll.js';
 // import './utils/ticker.js';
 // import './utils/popup.js';
 // import './utils/forms.js';
-// import './utils/accordeon.js';
 // import './utils/lazyImages.js';
