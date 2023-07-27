@@ -218,45 +218,68 @@
             @include adaptive-value("margin-bottom", 40, 20, 1);
         }
 
-        .bookmaker-line{
-            @media (max-width:768px){
+        .bookmaker-line {
+            @media (max-width: 768px) {
                 margin-bottom: 10px;
             }
         }
     }
 
-    // .hero-sigle
+    // .hero-reverse
 
-    &-single {
+    &-reverse {
         .hero__flex {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero__left {
-            text-align: center;
-            margin-bottom: 50px;
+            flex-direction: row-reverse;
 
             @media (max-width: 768px) {
-                margin-bottom: 40px;
+                flex-direction: column-reverse;
             }
         }
 
-        .hero__left,
-        .hero__right {
-            width: 100%;
-            max-width: none;
-            flex: unset;
+        .hero__left {
         }
 
-        .table-bold {
+        .hero__right {
             @media (max-width: 768px) {
-                margin-bottom: 20px;
                 margin-top: 0;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
 
-                p {
-                    margin-bottom: 0 !important;
-                    padding-top: 0;
+        .table-meta {
+            border: 0;
+            padding-top: 0;
+
+            margin-top: 20px;
+
+            @media (max-width: 768px) {
+                margin-top: 30px;
+            }
+
+            & > :last-child {
+                border-bottom: 1px solid #dbdbdb;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                padding: 5px 0 10px 0;
+                margin-bottom: 0;
+
+                font-family: NamuPro;
+                letter-spacing: -0.06em;
+
+                span,
+                label {
+                    margin-bottom: 0;
+                    font-size: 18px;
+                }
+
+                label {
+                    color: #c7c7c7;
                 }
             }
         }

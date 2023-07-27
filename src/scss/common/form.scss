@@ -1,3 +1,9 @@
+._560 {
+    .form__rows-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .form {
     // .form__rows
 
@@ -13,19 +19,17 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             align-items: flex-end;
-
-            & > :not(:last-child) {
-                margin-right: 15px;
-
-                @media (max-width: 768px) {
-                    margin-right: 0;
-                    margin-bottom: 20px;
-                }
-            }
+            gap: 15px;
 
             @media (max-width: 768px) {
                 display: block;
-                gap: 0;
+                gap: 20px 10px;
+            }
+
+            & > :not(:last-child) {
+                @media (max-width: 768px) {
+                    margin-bottom: 20px;
+                }
             }
         }
     }
@@ -33,38 +37,22 @@
     // .form__input
 
     &__input {
-        display: flex;
-        flex-direction: column;
-
         @media (max-width: 768px) {
             width: 100%;
         }
 
-        label {
-            color: #ccc;
-            font-family: Bebas Neue;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 1;
-            text-transform: uppercase;
-            transform: translate(0, 50%);
-            background-color: #fff;
-            width: fit-content;
-            margin-left: 26px;
-            padding: 0 4px;
-        }
-
         input {
-            border-radius: 10px;
-            border: 1px solid #cfcfcf;
+            background-color: #fff;
+            box-shadow: 0px 0px 42px 0px rgba(0, 0, 0, 0.06);
 
-            font-weight: 500;
-            letter-spacing: -0.72px;
-            padding: 18px 20px 18px 30px;
+            font-family: Namu1960;
+            letter-spacing: -0.04em;
+
+            padding: 14px 19px 14px 19px;
             width: 100%;
             font-size: 18px;
-            height: 60px;
+            height: 54px;
+            color: inherit;
 
             &::placeholder {
                 color: #cccccc;
@@ -80,11 +68,25 @@
 
     &__button {
         position: relative;
+        margin-top: 0 !important;
+
+        @media (max-width: 768px) {
+            max-width: none;
+        }
 
         input {
             width: 100%;
             cursor: pointer;
-            height: 60px;
+            height: 54px;
+            color: #fff;
+            position: relative;
+            display: block;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
 
             @media (max-width: 768px) {
                 max-width: none;

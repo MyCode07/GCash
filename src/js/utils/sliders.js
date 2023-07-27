@@ -1,46 +1,59 @@
-import { Swiper, Lazy, Pagination, Navigation } from "swiper";
+import { Swiper, Pagination } from "swiper";
 
-const sliderSection = document.querySelector('.slider');
+const slidersDrag = document.querySelectorAll('.slides__flex-swiper');
 
-if (sliderSection) {
+if (slidersDrag) {
 
-    const slider = sliderSection.querySelector('.swiper');
-    const sliderSlides = slider.querySelectorAll('.swiper .swiper-slide');
+    slidersDrag.forEach(sliderDrag => {
+        const slider = sliderDrag.querySelector('.swiper');
+        const sliderSlides = sliderDrag.querySelectorAll('.swiper-slide');
 
-    if (sliderSlides.length) {
-        const prevArrow = sliderSection.querySelector('.slider__arrows-prev');
-        const nextArrow = sliderSection.querySelector('.slider__arrows-next');
-        const pagination = sliderSection.querySelector('.slider__pagination');
+        if (sliderSlides.length) {
+            new Swiper(slider, {
+                slidesPerView: 'auto',
+                grabCursor: true,
+                spaceBetween: 30
+            })
+        }
+    });
+}
 
-        new Swiper(slider, {
-            modules: [
-                Pagination, Navigation
-            ],
-            loop: true,
 
-            navigation: {
-                prevEl: prevArrow,
-                nextEl: nextArrow,
-            },
 
-            pagination: {
-                el: pagination,
-                clickable: true
-            },
-            breakpoints: {
-                500: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
+const sliderSections = document.querySelectorAll('.slider');
+if (sliderSections.length) {
+
+    sliderSections.forEach(sliderSection => {
+        const slider = sliderSection.querySelector('.swiper');
+        const sliderSlides = sliderSection.querySelectorAll('.swiper-slide');
+
+        if (sliderSlides.length) {
+            const pagination = sliderSection.querySelector('.slider__pagination');
+
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                loop: true,
+
+                pagination: {
+                    el: pagination,
+                    clickable: true
                 },
-                769: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1025: {
-                    slidesPerView: 3,
-                    spaceBetween: 60,
+                spaceBetween: 20,
+
+                breakpoints: {
+                    300: {
+                        slidesPerView: 'auto',
+                    },
+                    769: {
+                        slidesPerView: 3,
+                    },
+                    1025: {
+                        slidesPerView: 4,
+                    }
                 }
-            }
-        })
-    }
+            })
+        }
+    });
 }

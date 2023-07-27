@@ -3,7 +3,6 @@ import './utils/sliders.js';
 import './utils/to-top.js';
 import './utils/replace.js';
 import './utils/inputmask.js';
-import './utils/drag-scroll.js';
 import './utils/accordeon.js';
 
 // import './utils/animations.js';

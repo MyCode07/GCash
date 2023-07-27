@@ -297,6 +297,18 @@ svg {
     color: #d80026;
 
     &:before {
-       display: none;
+        display: none;
+    }
+}
+
+._560 {
+    max-width: 560px !important;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (max-width: 768px) {
+        max-width: none !important;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
