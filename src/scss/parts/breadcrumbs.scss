@@ -1,10 +1,7 @@
 .breadcrumbs {
     width: 100%;
-    margin-bottom: 30px;
 
-    @media (max-width: 768px) {
-        margin-bottom: 40px;
-    }
+    @include adaptive-value("margin-bottom", 50, 25, 1);
 
     ul {
         display: flex;
@@ -19,15 +16,53 @@
         &:not(:has(a)) {
             color: #9a9a9a;
         }
+
+        font-family: Namu1960;
+        letter-spacing: -0.06em;
+
+        color: #cccccc;
+
+        a {
+            color: #0066ff;
+        }
     }
 
-    .dot {
+    svg {
         margin: 0 10px;
         display: block;
-        width: 3px;
-        height: 3px;
+        width: 10px;
         flex: 0 0 auto;
-        border-radius: 50%;
-        background-color: #3a3a3a;
+    }
+}
+
+.anchors {
+    @include adaptive-value("margin-top", -30, -20, 1);
+    @include adaptive-value("margin-left", -30, -20, 1);
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        overflow-y: auto;
+
+        @include adaptive-value("padding", 30, 20, 1);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    li {
+        a {
+            white-space: nowrap;
+            font-family: Namu1960;
+            letter-spacing: -0.06em;
+            text-align: center;
+            padding: 8px 17px;
+
+            background: #fff;
+            box-shadow: 0px 4px 33px 0px rgba(0, 0, 0, 0.05);
+        }
     }
 }

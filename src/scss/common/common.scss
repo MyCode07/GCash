@@ -100,6 +100,10 @@ a {
     font-style: italic;
 }
 
+img + p._italic {
+    margin-top: 10px;
+}
+
 .slider-buttons {
     button {
         img,
@@ -258,5 +262,41 @@ svg {
         bottom: 0;
         z-index: 0;
         max-height: 100%;
+    }
+}
+
+._pros,
+._cons {
+    position: relative;
+    padding-right: 1.5em;
+    width: fit-content;
+
+    &:after,
+    &:before {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        width: 0.9em;
+        height: 1px;
+        background-color: currentColor;
+    }
+
+    &:before {
+        transform: translate(0, -50%) rotate(90deg);
+    }
+}
+
+._pros {
+    color: #1ed800;
+}
+
+._cons {
+    color: #d80026;
+
+    &:before {
+       display: none;
     }
 }

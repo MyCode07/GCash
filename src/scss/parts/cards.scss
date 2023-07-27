@@ -169,7 +169,7 @@
     label {
         text-align: center;
         font-family: NamuPro;
-        letter-spacing: 0.06em;
+        letter-spacing: -0.06em;
         display: block;
     }
 
@@ -191,6 +191,70 @@
 .bonus {
     span {
         margin-bottom: 0;
+    }
+}
+
+.bookmaker-line {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 42px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 600px) {
+        display: block;
+    }
+
+    // .bookmaker-line__left
+
+    &__left {
+        margin-right: 10px;
+        display: flex;
+
+        @media (max-width: 600px) {
+            margin-right: 0;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+    }
+
+    // .bookmaker-line__image
+
+    &__image {
+        margin-right: 20px;
+
+        img {
+            width: 90px;
+        }
+    }
+
+    .rating {
+        margin: 0;
+    }
+
+    .bonus {
+        span {
+            text-align: left;
+            font-size: 18px;
+        }
+
+        label {
+            text-align: left;
+            color: #0066ff;
+            font-size: 26px;
+        }
+    }
+
+    ._btn {
+        max-width: 260px;
+        height: auto;
+        width: auto;
+        flex: 1 1 auto;
+
+        @media (max-width: 600px) {
+            width: 100%;
+            max-width: none;
+        }
     }
 }
 

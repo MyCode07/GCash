@@ -95,6 +95,16 @@
         @media (max-width: 768px) {
             margin-top: 30px;
         }
+
+        // .hero__right-content
+
+        &-content {
+            & > :not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            margin-bottom: 20px;
+        }
     }
 
     // .hero__sidebar
@@ -201,49 +211,16 @@
         }
     }
 
-    // .hero-casino
+    // .hero-bookmaker
 
-    &-casino {
-        .hero__left {
-            @media (min-width: 769px) {
-                flex: 1 1 auto;
-                width: 70%;
-            }
-
-            ._more {
-                display: block;
-                margin-top: 20px;
-                width: fit-content;
-
-                @media (max-width: 768px) {
-                    margin-inline: auto;
-                }
-            }
-
-            ._630 {
-                margin-inline: 0;
-            }
+    &-bookmaker {
+        h1 {
+            @include adaptive-value("margin-bottom", 40, 20, 1);
         }
 
-        .hero__right {
-            @media (min-width: 769px) {
-                width: 30%;
-                min-width: 250px;
-                margin-left: 30px;
-            }
-
-            @media (max-width: 768px) {
-                margin-top: 50px;
-            }
-        }
-
-        .hero__sidebar-navigation {
-            margin-top: 50px;
-            text-align: left;
-
-            @media (max-width: 768px) {
-                margin-bottom: 40px;
-                margin-top: 0;
+        .bookmaker-line{
+            @media (max-width:768px){
+                margin-bottom: 10px;
             }
         }
     }
