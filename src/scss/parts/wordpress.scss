@@ -68,10 +68,13 @@
     .wp-block-columns {
         margin-bottom: 0;
         padding-inline: 0;
-        @include adaptive-value("margin-top", 50, 30, 1);
         width: 100%;
 
         max-width: none;
+
+        &:not(:first-child) {
+            @include adaptive-value("margin-top", 50, 30, 1);
+        }
 
         &._border {
             h3,
@@ -216,6 +219,10 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+        }
+
+        &:empty {
+            margin-bottom: 0;
         }
     }
 
@@ -362,7 +369,7 @@
         &._2columns {
             justify-content: space-between;
 
-            &:first-child{
+            &:first-child {
                 margin-top: 0;
             }
 
