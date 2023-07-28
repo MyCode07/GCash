@@ -30,6 +30,10 @@ table {
             margin-left: auto;
             margin-right: auto;
         }
+
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+        min-width: 74px;
     }
 
     tbody {
@@ -48,7 +52,7 @@ table {
 }
 
 .wp-block-table {
-    overflow-x: unset !important;
+    overflow-x: normal !important;
 
     &:not(._center) {
         @media (max-width: 768px) {
@@ -68,11 +72,11 @@ table {
         margin-right: auto;
         margin-left: auto;
 
-        td{
+        td {
             width: 50%;
         }
 
-        table{
+        table {
             padding: 0 !important;
             width: 100% !important;
         }

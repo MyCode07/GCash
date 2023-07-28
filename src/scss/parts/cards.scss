@@ -186,10 +186,6 @@
 
         &._noshaddow {
             .slides__flex-item {
-                padding: 0;
-                box-shadow: none;
-                background-color: transparent;
-
                 p {
                     padding-top: 0;
                     border-top: 0;
@@ -209,6 +205,15 @@
                 }
             }
         }
+    }
+}
+
+._noshaddow {
+    .slides__flex-item,
+    article {
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
     }
 }
 
@@ -396,6 +401,7 @@
     }
 
     ._more {
+        margin-top: 0 !important;
         // ._more-eye
 
         &-eye {

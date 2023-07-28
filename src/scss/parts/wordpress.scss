@@ -6,6 +6,7 @@
     width: 100%;
     max-width: $container + px;
     margin-inline: auto;
+    gap: 0 !important;
 
     @media (max-width: $containerWithPadding + px) {
         max-width: none;
@@ -21,7 +22,6 @@
             margin-bottom: 25px;
         }
 
-        gap: 0;
     }
 
     &._border {
@@ -159,6 +159,9 @@
     }
 
     .wp-block-column {
+        flex-grow: unset !important;
+        flex-shrink: unset !important;
+        flex-basis: unset !important;
         width: calc(50% - 10px);
 
         @media (max-width: 768px) {
@@ -479,7 +482,7 @@
 
 @media (max-width: 781px) {
     .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
-        flex-basis: 100% !important;
+        flex-basis: unset !important;
     }
 }
 
