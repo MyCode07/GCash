@@ -86,10 +86,8 @@ document.addEventListener('click', function (e) {
 })
 
 
-const heroSidebar = document.querySelector('.hero__sidebar-navigation nav ul');
 const h2Titles = document.querySelectorAll('h2');
-
-if (heroSidebar && h2Titles.length) {
+if (h2Titles.length) {
     h2Titles.forEach(h2 => {
         const text = h2.textContent.toLocaleLowerCase();
         h2.id = text.replace(/\n\s+/gi, ' ')

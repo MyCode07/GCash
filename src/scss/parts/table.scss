@@ -4,7 +4,7 @@ table {
     border: 0 !important;
     width: 100%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         padding-inline: 30px;
         width: fit-content;
         max-width: none;
@@ -27,8 +27,6 @@ table {
         }
 
         img {
-            margin-left: auto;
-            margin-right: auto;
         }
 
         overflow-wrap: normal !important;
@@ -52,10 +50,10 @@ table {
 }
 
 .wp-block-table {
-    overflow-x: normal !important;
+    overflow-x: unset !important;
 
     &:not(._center) {
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             overflow-x: auto !important;
             width: 100vw;
             margin-left: -30px;
