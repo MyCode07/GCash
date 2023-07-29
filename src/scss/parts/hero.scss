@@ -275,7 +275,7 @@
                 justify-content: space-between;
 
                 padding: 5px 0 10px 0;
-                margin-bottom: 0;
+                margin-bottom: 0 !important;
 
                 font-family: NamuPro;
                 letter-spacing: -0.06em;
@@ -289,6 +289,8 @@
                 label {
                     color: #c7c7c7;
                 }
+
+
             }
         }
     }
